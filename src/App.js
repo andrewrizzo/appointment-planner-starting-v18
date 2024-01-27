@@ -21,7 +21,6 @@ function App() {
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage /> /* Add props to ContactsPage */ }/>
       <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage /> /* Add props to AppointmentsPage */ }/>
-     <Route path="src/components/appointmentForm/AppointmentForm.js" element={ <AppointmentForm />} />
     
     </Route>
   ));

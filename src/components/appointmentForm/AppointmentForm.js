@@ -25,128 +25,151 @@ export const AppointmentForm = ({
 
     <>
       <form
-      className="form"
+        className="form"
         style={{
           display: "flex",
           flexDirection: 'column',
-          backgroundColor: "blue",
+          backgroundColor: "lightblue",
           height: 900,
           width: 400,
+          fontSize: 'large',
+          color: "white",
         }}
       >
         <div
-        style={{
-        display: "flex",
-        justifyContent: 'flex-end',
-          height: 90,
-          backgroundColor: 'red',
-      
-      }}
-        
+          style={{
+            display: "flex",
+            justifyContent: 'flex-end',
+            height: 90,
+            backgroundColor: '#064789',
+
+          }}
+
         >
           <label>
-            what is your your name:
+            Participant name:
             <input // name of Person
               style={{
                 height: 100,
-              marginLeft: 40,
-             width: 145,
-            }}
-              
+                marginLeft: 40,
+                width: 145,
+                backgroundColor: "transparent",
+                border: "none",
+              }}
+
               type="text"
               name="name of person "
+              placeholder="Name"
             />
           </label>
         </div>
         <div
-        style={{
-          display: "flex", 
-          height: 90,
-          justifyContent: 'flex-end',
-          backgroundColor: "green",
-        }}
-        
+          style={{
+            display: "flex",
+            height: 90,
+            justifyContent: 'flex-end',
+            backgroundColor: "#427AA1",
+            alignItems: 'center',
+          }}
+
         >
           <label>
-            
-            What date is the meeting:
+
+           Meeting date:
           </label>
           <input // date
-             style={{
+            style={{
               height: 100,
-            marginLeft: 40,
-            width: 145,
-          }}
+              marginLeft: 40,
+              width: 145,
+              backgroundColor: "transparent",
+              border: "none",
+            }}
             type="date"
             id="date"
           />
         </div>
         <div
-        style={{
-         display: "flex",
-          height: 90,
-         justifyContent: "flex-end",
-         backgroundColor: "yellow",
-      }}
+          style={{
+            display: "flex",
+            height: 90,
+            justifyContent: "flex-end",
+            backgroundColor: "#064789",
+          }}
         >
           <label>
-            What time is the meeting:
+             Meeting time:
             <input // time
-               style={{
+              style={{
                 height: 100,
-              marginLeft: 40,
-              width: 145,
-            }}
+                marginLeft: 40,
+                width: 145,
+                backgroundColor: "transparent",
+                border: "none",
+              }}
               type="time" id="date"
             />
           </label>
         </div>
         <div
-        style={{
-         display: "flex",
-          height: 90,
-         justifyContent: "flex-end",
-         backgroundColor: " lightblue",
-        }}
-        
+          style={{
+            display: "flex",
+            height: 90,
+            justifyContent: "flex-end",
+            backgroundColor: "#427AA1",
+          }}
+
         >
           <label>
-            Where are you meeting:
+           Meeting location:
             <input // Address
-               style={{
+              style={{
                 height: 100,
-              marginLeft: 40,
-              width: 145
-              ,
-            }}
+                marginLeft: 40,
+                width: 145,
+                backgroundColor: "transparent",
+                border: "none",
+              }}
               type="address"
               id="address"
-              placeholder="addess"
+              placeholder="address"
             />
           </label>
         </div>
         <div
-        style={{
-         display: "flex",
-          height:  90,
-         justifyContent: "flex-end",
-         backgroundColor: "brown",
-        }}
+          style={{
+            display: "flex",
+            height: 90,
+            justifyContent: "flex-end",
+            backgroundColor: "#064789",
+          }}
         >
           <label>
-            you lending the meeting:
+              Meeting host:
             <input // host aka Who are you meeting with?
               style={{
-                height: 100,
-              marginLeft: 40,
-             width: 145,
-            }} 
+                height: 90,
+                marginLeft: 40,
+                width: 145,
+                backgroundColor: "transparent",
+                border: "none",
+              }}
               type="text"
               id="host"
+              placeholder="host"
             />
           </label>
         </div>
-
+         <button
+         style={{
+          height: 70,
+          backgroundColor: "#59C9A5",
+          border: "none",
+         color: "white",
+        }}
+         
+         > Submit
+         </button>
       </form>
     </>
 

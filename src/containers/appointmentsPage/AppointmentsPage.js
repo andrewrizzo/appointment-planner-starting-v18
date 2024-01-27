@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
+import { ROUTES } from "../../components/root/Root";
 
 export const AppointmentsPage = () => {
   /*
@@ -31,16 +32,7 @@ const [time , setTime] = useState();
 
       }}
     >
-      <section
-        style={{
-          display: 'flex',
-          flexDirection: 'flexEnd',
-          backgroundColor: 'red',
-          flexGrow: 1,
-        }}
-      >
-        <h2>Add Appointment</h2>
-      </section>
+    <AppointmentForm />
       <hr />
       <section
         style={{
