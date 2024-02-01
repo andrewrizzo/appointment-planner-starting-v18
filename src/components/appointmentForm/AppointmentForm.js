@@ -25,7 +25,6 @@ export const AppointmentForm = ({
 
     <>
       <form
-        className="form"
         style={{
           display: "flex",
           flexDirection: 'column',
@@ -35,7 +34,7 @@ export const AppointmentForm = ({
           fontSize: 'large',
           color: "white",
         }}
-      >
+     >
         <div
           style={{
             display: "flex",
@@ -55,11 +54,13 @@ export const AppointmentForm = ({
                 width: 145,
                 backgroundColor: "transparent",
                 border: "none",
+                color: 'white',
+                
               }}
-
               type="text"
               name="name of person "
               placeholder="Name"
+
             />
           </label>
         </div>
@@ -84,6 +85,7 @@ export const AppointmentForm = ({
               width: 145,
               backgroundColor: "transparent",
               border: "none",
+              color: 'white',
             }}
             type="date"
             id="date"
@@ -106,6 +108,7 @@ export const AppointmentForm = ({
                 width: 145,
                 backgroundColor: "transparent",
                 border: "none",
+                color: 'white',
               }}
               type="time" id="date"
             />
@@ -129,6 +132,7 @@ export const AppointmentForm = ({
                 width: 145,
                 backgroundColor: "transparent",
                 border: "none",
+                color: 'white',
               }}
               type="address"
               id="address"
@@ -153,6 +157,7 @@ export const AppointmentForm = ({
                 width: 145,
                 backgroundColor: "transparent",
                 border: "none",
+                color: 'white',
               }}
               type="text"
               id="host"
