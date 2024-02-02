@@ -19,7 +19,7 @@
     --hover-month-cell-background: linear-gradient(
       45deg,
       #aae7f541,
-      #006aff7a
+      #ff0800f1
     );
     --selected-background: linear-gradient(135deg, #00ff80ab, #ffc0c0bd);
   }
