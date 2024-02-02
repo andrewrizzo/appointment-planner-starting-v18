@@ -40,7 +40,7 @@ export const AppointmentForm = ({
             display: "flex",
             justifyContent: 'flex-end',
             height: 90,
-            backgroundColor: '#064789',
+            backgroundColor: 'rgb(80 132 205)',
 
           }}
 
@@ -69,7 +69,7 @@ export const AppointmentForm = ({
             display: "flex",
             height: 90,
             justifyContent: 'flex-end',
-            backgroundColor: "#427AA1",
+            backgroundColor: "rgb(127 125 166 / 30%)",
             alignItems: 'center',
           }}
 
@@ -96,7 +96,7 @@ export const AppointmentForm = ({
             display: "flex",
             height: 90,
             justifyContent: "flex-end",
-            backgroundColor: "#064789",
+            backgroundColor: "rgb(80 132 205)",
           }}
         >
           <label>
@@ -119,7 +119,7 @@ export const AppointmentForm = ({
             display: "flex",
             height: 90,
             justifyContent: "flex-end",
-            backgroundColor: "#427AA1",
+            backgroundColor: "rgb(127 125 166 / 30%)",
           }}
 
         >
@@ -133,6 +133,7 @@ export const AppointmentForm = ({
                 backgroundColor: "transparent",
                 border: "none",
                 color: 'white',
+                
               }}
               type="address"
               id="address"
@@ -145,7 +146,7 @@ export const AppointmentForm = ({
             display: "flex",
             height: 90,
             justifyContent: "flex-end",
-            backgroundColor: "#064789",
+            backgroundColor: "rgb(80 132 205)",
           }}
         >
           <label>
@@ -168,7 +169,7 @@ export const AppointmentForm = ({
          <button
          style={{
           height: 70,
-          backgroundColor: "#59C9A5",
+          backgroundColor: "rgb(221 124 141)",
           border: "none",
          color: "white",
         }}

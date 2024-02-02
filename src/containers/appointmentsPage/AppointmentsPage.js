@@ -42,7 +42,6 @@ const [time , setTime] = useState();
           
         }}
       >
-        <h2>Appointments</h2>
         <Calender />
       
       </section>
