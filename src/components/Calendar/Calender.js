@@ -145,12 +145,13 @@ class WeekDays extends React.Component {
 }
 
 class DaysOfMonth extends React.Component {
+  state = {}
   render() {
     const days = Array.from({ length: this.props.days }, (k, v) => v + 1);
     const dayToBeginTheMonthFrom = firstDayOfMonth(this.props.month);
     const currentDate = this.props.now.getDate();
     const style = { gridColumnStart: dayToBeginTheMonthFrom + 1 };
-
+     
     return days.map((day, i) => {
       return (
         <span
@@ -166,6 +167,7 @@ class DaysOfMonth extends React.Component {
             `}
           style={i === 0 ? style : {}}
         >
+          <button>+</button>
           {day}
         </span>
       );

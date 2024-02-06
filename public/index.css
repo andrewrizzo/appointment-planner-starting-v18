@@ -84,3 +84,6 @@ select {
 .tile-container {
   margin-bottom: 20px;
 }
+body {
+background-color: hsl(90, 10%, 95%);
+}

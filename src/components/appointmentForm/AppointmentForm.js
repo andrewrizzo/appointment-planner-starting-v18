@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AppointmentForm.css"
 
 const getTodayString = () => {
@@ -22,164 +22,91 @@ export const AppointmentForm = ({
 }) => {
   const [v, setV] = useState();
 
+  // const [color3, setColor3] = useState('rgb(80 132 205)');
+  // useEffect(() => { window.styles.setColor3 = setColor3; }, [setColor3]);
+  // const [color4, setColor4] = useState('rgb(127 125 166 / 30%)');
+  // useEffect(() => { window.styles.setColor4 = setColor4; }, [setColor4]);
+  // const [color5, setColor5] = useState('rgb(80 132 205)');
+  // useEffect(() => { window.styles.setColor5 = setColor5; }, [setColor5]);
+  // const [color6, setColor6] = useState(' rgb(127 125 166 / 30%)');
+  // useEffect(() => { window.styles.setColor6 = setColor6; }, [setColor6]);
+  // const [color7, setColor7] = useState('rgb(80 132 205)');
+  // useEffect(() => { window.styles.setColor7 = setColor7; }, [setColor7]);
+  // const [color8, setColor8] = useState('transparent');
+  // useEffect(() => { window.styles.setColor8 = setColor8; }, [setColor8]);
+  // const [color9, setColor9] = useState('rgb(221 124 141)');
+  // useEffect(() => { window.styles.setColor9 = setColor9; }, [setColor9]);
+  // const [color10, setColor10] = useState('lightblue');
+  // useEffect(() => { window.styles.setColor10 = setColor10; }, [setColor10]);
+  // const [color11, setColor11] = useState('white');
+  // useEffect(() => { window.styles.setColor11 = setColor11; }, [setColor11]);
+  // const [color12, setColor12] = useState('white');
+  // useEffect(() => { window.styles.setColor12 = setColor12; }, [setColor12]);
+
   return (
 
     <>
-      <form
-        style={{
-          display: "flex",
-          flexDirection: 'column',
-          backgroundColor: "lightblue",
-          height: 900,
-          width: 400,
-          fontSize: 'large',
-          color: "white",
-        }}
-     >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: 'flex-end',
-            height: 90,
-            backgroundColor: 'rgb(80 132 205)',
-
-          }}
-
-        >
+      <form className="form">
+        <div className="d1">
           <label>
             Participant name:
-            <input // name of Person
-              style={{
-                height: 100,
-                marginLeft: 40,
-                width: 145,
-                backgroundColor: "transparent",
-                border: "none",
-                color: 'white',
-                
-              }}
+            <input className="input" // name of Person
+
               type="text"
               name="name of person "
               placeholder="Name"
-
+              // style={{
+              //   backgroundColor: color3,
+              // }}
             />
           </label>
         </div>
-        <div
-          style={{
-            display: "flex",
-            height: 90,
-            justifyContent: 'flex-end',
-            backgroundColor: "rgb(127 125 166 / 30%)",
-            alignItems: 'center',
-          }}
-
-        >
+        <div className="d2">
           <label>
 
-           Meeting date:
+            Meeting date:
           </label>
-          <input // date
-            style={{
-              height: 100,
-              marginLeft: 40,
-              width: 145,
-              backgroundColor: "transparent",
-              border: "none",
-              color: 'white',
-            }}
+          <input  // date
+
             type="date"
             id="date"
           />
         </div>
-        <div
-          style={{
-            display: "flex",
-            height: 90,
-            justifyContent: "flex-end",
-            backgroundColor: "rgb(80 132 205)",
-          }}
-        >
+        <div className="d3">
           <label>
-             Meeting time:
+            Meeting time:
             <input // time
-              style={{
-                height: 100,
-                marginLeft: 40,
-                width: 145,
-                backgroundColor: "transparent",
-                border: "none",
-                color: 'white',
-              }}
+
               type="time" id="date"
             />
           </label>
         </div>
-        <div
-          style={{
-            display: "flex",
-            height: 90,
-            justifyContent: "flex-end",
-            backgroundColor: "rgb(127 125 166 / 30%)",
-          }}
-
-        >
+        <div className="d4">
           <label>
-           Meeting location:
+            Meeting location:
             <input // Address
-              style={{
-                height: 100,
-                marginLeft: 40,
-                width: 145,
-                backgroundColor: "transparent",
-                border: "none",
-                color: 'white',
-                
-              }}
+
               type="address"
               id="address"
               placeholder="address"
             />
           </label>
         </div>
-        <div
-          style={{
-            display: "flex",
-            height: 90,
-            justifyContent: "flex-end",
-            backgroundColor: "rgb(80 132 205)",
-          }}
-        >
+        <div className="d5" >
           <label>
-              Meeting host:
+            Meeting host:
             <input // host aka Who are you meeting with?
-              style={{
-                height: 90,
-                marginLeft: 40,
-                width: 145,
-                backgroundColor: "transparent",
-                border: "none",
-                color: 'white',
-              }}
+
               type="text"
               id="host"
               placeholder="host"
             />
           </label>
         </div>
-         <button
-         style={{
-          height: 70,
-          backgroundColor: "rgb(221 124 141)",
-          border: "none",
-         color: "white",
-        }}
-         
-         > Submit
-         </button>
+        <button className="button"> Submit
+        </button>
       </form>
     </>
-
 
   );
 };

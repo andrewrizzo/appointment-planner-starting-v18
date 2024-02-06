@@ -1,27 +1,27 @@
 :root {
     --radial-background: radial-gradient(
         circle at 50% 0,
-        #ff00006e,
-        #ff000000 70.71%
+        #ffffff,
+        #ededed00 70.71%
       ),
       radial-gradient(
         circle at 6.7% 75%,
-        #0000ff80,
-        #0000ff00 70.71%
+        #f8f8f8,
+        #d9d9d900 70.71%
       ),
       radial-gradient(
           circle at 93.3% 75%,
-          #11b6e4c9,
+          #fefefec0,
           #00ff0000 70.71%
         )
-        #11B5E4;
-    --hover-cell-background: linear-gradient(45deg, white, #00ffc38f);
+        #f1f1f1;
+    --hover-cell-background: linear-gradient(45deg, white, hsla(196, 100%, 85%, 0.561));
     --hover-month-cell-background: linear-gradient(
       45deg,
-      #aae7f541,
-      #ff0800f1
+      white,
+      hsla(196, 100%, 85%, 0.561)
     );
-    --selected-background: linear-gradient(135deg, #00ff80ab, #ffc0c0bd);
+    --selected-background: linear-gradient(135deg, #156b9a57, hsla(179, 10%, 88%, 0.741));
   }
   
   * {
@@ -130,7 +130,7 @@
   }
   
   .header-icons span:hover {
-    background: #ffffff3b;
+    background: #738b93;
   }
   
   .weekrow {
@@ -147,9 +147,9 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    /* background: lightgray;
+    background: hsla(193, 74%, 16%, 0.584);
     padding: 1px;
-    background-clip: content-box; */
+    background-clip: content-box;
   }
   
   .day {
@@ -158,11 +158,24 @@
     justify-content: center;
     align-items: center;
   
-    background: #ffffff3b;
+    background:#ffffff;
     padding: 1px;
     background-clip: content-box;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .day button {
+   background: rgba(200,200,200,0.2);
+   border: none;
+   width: 2em;
+   height: 2em;
+   padding: 0.5em;
+   border-radius: 10px;
+   cursor: pointer;
+   visibility: hidden;
+  }
+  .day:not(.today):hover button {
+    visibility: visible;
   }
   
   .day:not(.today):hover {
@@ -171,7 +184,7 @@
   }
   
   .holiday {
-    background: linear-gradient(135deg, #ff0000ab, #ffc0e3);
+    background: linear-gradient(135deg, white, white);
     background-clip: content-box;
   }
   

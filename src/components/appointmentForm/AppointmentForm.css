@@ -1,3 +1,74 @@
 input::placeholder {
     color: white;
 }
+
+.form {
+    display: flex;
+    flex-Direction: column;
+    background-Color:  hsl(90, 10%, 95%); /*color10*/
+    font-Size: large;
+    color: white;
+}
+
+.d1 { /*color 3 */
+    display: flex;
+    justify-Content: flex-end;
+    height: 90px;
+    background-Color: hsl(212, 40%, 75%);
+
+}
+
+.d2 {/*color 4 */
+    display: flex;
+    height: 90px;
+    justify-Content: flex-end;
+    background-Color: hsl(209, 69%, 90%);
+    align-Items: center;
+
+
+}
+
+.d3 {/*color 5 */
+    display: flex;
+    height: 90px;
+    justify-content: flex-end;
+    background-Color: hsl(212, 40%, 75%);
+
+
+
+}
+.d4 {/*color 6 */
+    display: flex;
+    height: 90px;
+    justify-Content: flex-end;
+    background-Color: hsl(209, 69%, 90%)
+
+
+}
+.d5 {/*color 7 */
+    display: flex;
+    height: 90px;
+    justify-Content: flex-end;
+    background-Color: hsl(212, 40%, 75%);
+
+
+}
+
+
+
+input {
+    height: 100px;
+    margin-Left: 40px;
+    width: 145px;
+    background-Color: transparent;/*color 8*/
+    border: none;
+    color: white;
+       
+}
+
+.button {
+    height: 70px;
+    background-Color: hsl(96, 40%, 77%);/*color 9 */
+    border: none;
+   color: white;
+}

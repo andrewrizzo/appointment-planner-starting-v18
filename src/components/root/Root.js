@@ -8,7 +8,11 @@ export const ROUTES = {
 function Root() {
     return (
         <>
-            <nav>
+            <nav style={{
+                backgroundColor: ' hsl(90, 10%, 95%)',
+                // height: 100,
+                
+            }}>
                 <NavLink to={ROUTES.CONTACTS} >
                 Contacts
                 </NavLink>

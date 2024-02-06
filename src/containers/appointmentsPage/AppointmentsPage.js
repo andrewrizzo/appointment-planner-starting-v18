@@ -31,13 +31,13 @@ const [time , setTime] = useState();
         backgroundColor: "blue",
       }}
     >
-    <AppointmentForm />
+    {/* <AppointmentForm /> */}
       <hr />
       <section
         style={{
           display: 'flex',
           flexDirection: 'column',
-          backgroundColor: 'lightblue',
+          backgroundColor: ' hsl(90, 10%, 95%)',
           flexGrow: 1,
           
         }}
