@@ -110,3 +110,4 @@ export const AppointmentForm = ({
 
   );
 };
+export default AppointmentForm;

@@ -1,15 +1,46 @@
-import React from "react";
+import React, {useState} from "react";
 import "./styles.css";
 import { daysInMonth, firstDayOfMonth, months } from "./date";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
-export default function App() {
+import Modal from "./Modal";
+export default function Calender() {
+  const [modalVisble, setModalVisble] = useState (false);
+  const [appointmentList, setAppintmentList] = useState ([
+    {
+      name: "sean",
+      date: Date("2024-02-10T12:00:00ET") ,// YYYY-MM-DDTHH:mm:ssET
+      Address: "2443 sw cow steet",
+      hostname: 'andrew'
+    },
+    {
+      name: "max",
+      date: Date("2024-03-05T1:00:00ET") ,// YYYY-MM-DDTHH:mm:ssET
+      Address: "2 sw cow steet",
+      hostname: 'cole'
+    },
+    {
+      name: "dick",
+      date: Date("2024-01-17T2:00:00ET") ,// YYYY-MM-DDTHH:mm:ssET
+      Address: "24 sw ap steet",
+      hostname: 'ken'
+    },
+  ]);
+  console.log({appointmentList});
   return (
     <div className="container">
-      <Calendar />
-    </div>
+      <Calendar
+        {...{
+          setModalVisble
+        }}
+      />
+      <Modal
+        modalVisible={modalVisble}
+        setModalVisible={setModalVisble}
+      />
+    
+   </div> 
   );
 }
 
@@ -62,6 +93,7 @@ class Calendar extends React.Component {
           days={days}
           month={this.state.month}
           now={this.state.now}
+          setModalVisble={this.props.setModalVisble}
         />
         {this.state.displayMonthSelector && (
           <MonthSelector
@@ -166,9 +198,13 @@ class DaysOfMonth extends React.Component {
             }
             `}
           style={i === 0 ? style : {}}
-        >
-          <button>+</button>
-          {day}
+          >
+            <span>
+              {day}
+            </span>
+            <button onClick={() => this.props.setModalVisble(true)} className="btn-modal">
+              +
+            </button>
         </span>
       );
     });
