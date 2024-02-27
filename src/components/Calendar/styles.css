@@ -93,7 +93,7 @@
     position: relative;
     border-radius: 10px;
     box-shadow: 0 3px 6px #ddd;
-    width: 1000px;
+    width: auto;
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);

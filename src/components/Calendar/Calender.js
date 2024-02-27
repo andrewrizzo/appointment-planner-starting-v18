@@ -5,49 +5,57 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Modal from "./Modal";
+import AppointmentForm from "../appointmentForm/AppointmentForm";
+import { isBefore, isSameDay } from "date-fns";
+import dayjs from "dayjs";
 export default function Calender() {
   const [modalVisble, setModalVisble] = useState (false);
-  const [appointmentList, setAppintmentList] = useState ([
+  const [appointments, setappointments] = useState ([
     {
       name: "sean",
-      date: Date("2024-02-10T12:00:00ET") ,// YYYY-MM-DDTHH:mm:ssET
+      date: dayjs("2024-02-10T12:00:00") ,// YYYY-MM-DDTHH:mm:ssET
       Address: "2443 sw cow steet",
       hostname: 'andrew'
     },
     {
       name: "max",
-      date: Date("2024-03-05T1:00:00ET") ,// YYYY-MM-DDTHH:mm:ssET
+      date: dayjs("2024-03-05T1:00:00") ,// YYYY-MM-DDTHH:mm:ssET
       Address: "2 sw cow steet",
       hostname: 'cole'
     },
     {
-      name: "dick",
-      date: Date("2024-01-17T2:00:00ET") ,// YYYY-MM-DDTHH:mm:ssET
+      name: "fog",
+      date: dayjs("2024-01-17T2:00:00") ,// YYYY-MM-DDTHH:mm:ssET
+      Address: "24 sw ap steet",
+      hostname: 'ken'
+    },
+    {
+      name: "fog",
+      date: dayjs("2024-01-17T2:00:00") ,// YYYY-MM-DDTHH:mm:ssET
       Address: "24 sw ap steet",
       hostname: 'ken'
     },
   ]);
-  console.log({appointmentList});
+  console.log({appointments})
   return (
     <div className="container">
       <Calendar
         {...{
-          setModalVisble
+          setModalVisble, appointments
         }}
+      
       />
       <Modal
         modalVisible={modalVisble}
         setModalVisible={setModalVisble}
       />
-    
    </div> 
   );
 }
 
 class Calendar extends React.Component {
   constructor(props) {
-    super(props);
-
+    super(props );
     const now = new Date();
     this.state = {
       month: now.getMonth(),
@@ -66,7 +74,7 @@ class Calendar extends React.Component {
       };
     });
   };
-
+  
   monthHandler = () => {
     this.setState(prevState => ({ displayMonthSelector: true }));
   };
@@ -77,7 +85,7 @@ class Calendar extends React.Component {
       () => this.setMonth(month)
     );
   };
-
+  
   render() {
     const days = daysInMonth(this.state.month);
     return (
@@ -90,10 +98,11 @@ class Calendar extends React.Component {
         />
         <WeekDays />
         <DaysOfMonth
-          days={days}
+         days={days}
           month={this.state.month}
           now={this.state.now}
           setModalVisble={this.props.setModalVisble}
+          appointments={this.props.appointments}
         />
         {this.state.displayMonthSelector && (
           <MonthSelector
@@ -176,15 +185,15 @@ class WeekDays extends React.Component {
   }
 }
 
-class DaysOfMonth extends React.Component {
+class DaysOfMonth extends React.Component { // jsss
   state = {}
   render() {
     const days = Array.from({ length: this.props.days }, (k, v) => v + 1);
     const dayToBeginTheMonthFrom = firstDayOfMonth(this.props.month);
     const currentDate = this.props.now.getDate();
     const style = { gridColumnStart: dayToBeginTheMonthFrom + 1 };
-     
     return days.map((day, i) => {
+      var _currentDate = dayjs(`${this.props.now.getMonth()+1}/${day}/${this.props.now.getFullYear()}`)
       return (
         <span
           key={i}
@@ -201,6 +210,15 @@ class DaysOfMonth extends React.Component {
           >
             <span>
               {day}
+              {
+              /*list.filter.map=> <></>*/
+              this.props.appointments
+                .filter(v => dayjs(v.date).isSame(_currentDate, 'D'))
+                .map(v => {
+                  console.log({ day, i, a: v.date, b: _currentDate });
+                  return <span>{v.name }</span>
+                })
+               }
             </span>
             <button onClick={() => this.props.setModalVisble(true)} className="btn-modal">
               +
@@ -209,4 +227,5 @@ class DaysOfMonth extends React.Component {
       );
     });
   }
-}
+ }
+// }

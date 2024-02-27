@@ -12,7 +12,7 @@ export default function Modal(props) {
     document.body.classList.remove('active-modal')
   }
 
-  console.log({props})
+  // console.log({props})
 
   return (
     <>
