@@ -21,7 +21,6 @@ export default function Modal(props) {
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
             <AppointmentForm />
-            
           </div>
         </div>
       )}

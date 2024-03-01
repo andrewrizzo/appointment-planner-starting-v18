@@ -29,12 +29,6 @@ export default function Calender() {
       Address: "24 sw ap steet",
       hostname: 'ken'
     },
-    {
-      name: "fog",
-      date: dayjs("2024-01-17T2:00:00") ,// YYYY-MM-DDTHH:mm:ssET
-      Address: "24 sw ap steet",
-      hostname: 'ken'
-    },
   ]);
   console.log({appointments})
   return (
