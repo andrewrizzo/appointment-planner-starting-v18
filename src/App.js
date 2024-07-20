@@ -3,8 +3,7 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, N
 import Root, { ROUTES } from "./components/root/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
-import { AppointmentForm } from "./components/appointmentForm/AppointmentForm";
-
+import { ContactsFromPage } from "./containers/ContactFromPage/ContPageFromPage";
 function App() {
   /*
   Define state variables for 
@@ -21,7 +20,7 @@ function App() {
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage /> /* Add props to ContactsPage */ }/>
       <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage /> /* Add props to AppointmentsPage */ }/>
-    
+      <Route path={ROUTES.ContactsFromPage} element={ <ContactsFromPage/> }/>
     </Route>
   ));
   

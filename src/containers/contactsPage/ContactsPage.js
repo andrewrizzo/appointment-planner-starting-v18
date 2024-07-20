@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import { TileList } from "../../components/tileList/TileList";
-
+import ContactPicker from "../../components/contactPicker/ContactPicker";
 export const ContactsPage = () => {
   /*
   Define state variables for 
@@ -24,13 +24,7 @@ export const ContactsPage = () => {
 
   return (
     <div>
-      <section>
-        <h2>Add Contact</h2> 
-      </section>
-      <hr />
-      <section>
-        <h2>Contacts</h2>
-      </section>
+      <ContactPicker/>
     </div>
   );
 };

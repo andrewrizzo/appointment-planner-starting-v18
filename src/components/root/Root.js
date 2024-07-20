@@ -1,9 +1,11 @@
 import {  Outlet, NavLink } from "react-router-dom";
+import { ContactsFromPage } from "../../containers/ContactFromPage/ContPageFromPage";
 
 export const ROUTES = {
     CONTACTS: "/contacts",
     APPOINTMENTS: "/appointments",
-  };
+    ContactsFromPage: '/ContactFromPage',
+};
 
 function Root() {
     return (
@@ -19,6 +21,10 @@ function Root() {
                 <NavLink to={ROUTES.APPOINTMENTS} >
                 Appointments
                 </NavLink>
+                <NavLink to={ROUTES.ContactsFromPage} >
+                 Add Contacts 
+                 </NavLink>
+
             </nav>
             <Outlet/>
       </>
