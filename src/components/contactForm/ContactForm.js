@@ -11,59 +11,39 @@ export const ContactForm = ({
 }) => {
   return (
     <>
-    <>
-      <form className="form">
-        <div className="d1">
-          <label>
-            Participant name:
-            <input className="input" // name of Person
+      <>
+        <form className="form">
+          <div className="d1">
+            <label>
+              Perison Name:
+              <input className="input" // name of Person
 
-              type="text"
-              name="name of person "
-              placeholder="Name"
-             
-            />
-          </label>
-        </div>
-        <div className="d2">
-          <label>
+                type="text"
+                name="name of person "
+                placeholder="Name"
 
-            Meeting date:
-          </label>
-          <input  // date
+              />
+            </label>
+          </div>
+          <div className="d4">
+            <label>
+              Phone Number
+              <input // Phone Number
 
-            type="date"
-            id="date"
-          />
-        </div>
-        <div className="d3">
-          <label>
-            Meeting time:
-            <input // time
+                type="tel"
+                id="phone"
+                placeholder="Number"
+              />
+            </label>
+          </div>
 
-              type="time" id="date"
-            />
-          </label>
-        </div>
-        <div className="d4">
-          <label>
-            Phone Number
-            <input // Phone Number
+          <button className="button"> Submit
+          </button>
+        </form>
+      </>
 
-              type="tel"
-              id="phone"
-              placeholder="Number"
-            />
-          </label>
-        </div>
-       
-        <button className="button"> Submit
-        </button>
-      </form>
-    </>
-    
-    
+
     </>
   );
 };
-export default ContactForm ;
+export default ContactForm;

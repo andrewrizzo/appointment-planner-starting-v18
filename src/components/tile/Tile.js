@@ -4,10 +4,14 @@ export default (props) => {
   return (
     <div className="tile-container">
       <ul>
-         <ls> {props.description}</ls>
-         <ls> {props.name}</ls>
+        <li>
+          {props.name}
+        </li>
+        <ls>
+          {props.description}
+          </ls>
       </ul>
-     
+        <button>More</button>
     </div>
   );
 };
