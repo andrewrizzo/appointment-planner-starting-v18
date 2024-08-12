@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
+import WeeklyOverview from "../../components/Weekly overview/Weeklyoverview";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 import { ROUTES } from "../../components/root/Root";
 import Calender from "../../components/Calendar/Calender";
+import './apt.css'
 export const AppointmentsPage = () => {
   /*
   Define state variables for 
@@ -33,18 +34,11 @@ const [time , setTime] = useState();
     >
     {/* <AppointmentForm /> */}
       <hr />
-      <section
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: ' hsl(90, 10%, 95%)',
-          flexGrow: 1,
-          
-        }}
-      >
+      <div className="a2">
+      <WeeklyOverview/>
         <Calender />
       
-      </section>
+      </div>
     </div>
   );
 };

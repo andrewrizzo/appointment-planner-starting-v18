@@ -1,13 +1,16 @@
 import React from "react";
+import './wo.css'
 export function WeeklyOverview  () {
 
   return ( <>
-      <h1> Weekly Overview</h1>
+      <div className="main">
+        <h1> Weekly Overview</h1>
         <h2> date</h2>
         <ol>
         <ls>fist</ls>
-        <ls>cat</ls>
+        <li>cat</li>
         </ol>
+      </div>
     </>
     );
 };
