@@ -87,3 +87,7 @@ select {
 body {
 background-color: hsl(90, 10%, 95%);
 }
+.a2{
+  display: flex;
+  /* border: 8px solid black */
+}

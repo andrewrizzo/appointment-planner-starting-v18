@@ -10,11 +10,11 @@ export const AppointmentsPage = () => {
   Define state variables for 
   appointment info
   */
-const [contacts , setContacts] = useState();
-const [title , setTitle] = useState();
-const [contact, setContact] = useState();
-const [date , setDate] = useState();
-const [time , setTime] = useState();
+  const [contacts, setContacts] = useState();
+  const [title, setTitle] = useState();
+  const [contact, setContact] = useState();
+  const [date, setDate] = useState();
+  const [time, setTime] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,20 +25,23 @@ const [time , setTime] = useState();
   };
 
   return (
-    <div
+    <div className="a1"
       style={{
-        display: "flex",
-        flexDirection: 'row',
-        backgroundColor: "blue",
+        // display: "flex",
+        // flexDirection: 'row',
+        // backgroundColor: "blue",
       }}
     >
-    {/* <AppointmentForm /> */}
-      <hr />
+      {/* <AppointmentForm /> */}
+
       <div className="a2">
-      <WeeklyOverview/>
+
+       
+
         <Calender />
-      
+        <WeeklyOverview />
       </div>
+
     </div>
   );
 };

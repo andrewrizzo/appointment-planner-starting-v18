@@ -3,7 +3,7 @@ import './wo.css'
 export function WeeklyOverview  () {
 
   return ( <>
-      <div className="main">
+      <div className="wo1">
         <h1> Weekly Overview</h1>
         <h2> date</h2>
         <ol>
